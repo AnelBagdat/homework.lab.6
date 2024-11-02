@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Моя первая веб-страница</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div id="cart-items">
+            <div class="item">Milk 1 l.<span class="qty"> x2</span></div>
+            <div class="item">Cola 1.5 l. <span class="qty"> x1</span></div>
+            <div class="item">Bread<span class="qty"> x2</span></div>
+            <div class="item">Cheese<span class="qty"> x1</span></div>
+            <div class="item">Chocolate bar<span class="qty"> x3</span></div>
+          </div>
+                     
+        <script>
+            var a=document.getElementsByClassName('item');
+            for(var i=0;i<a.length;i++){
+                if(i==1){
+                    a[1].remove();
+                }
+                if(i==3){
+                    var b = document.createElement('div');
+                    b.className = 'item';
+                    b.innerHTML = 'Canned Fish<span class="qty"> x4</span>';
+                    a[i].parentElement.replaceChild(b, a[i]);
+                }
+            }
+        </script>
+    </body>
+</html

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Моя первая веб-страница</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <form name="search">
+            <label>Search the site:
+              <input type="text" name="search">
+            </label>
+            <input type="submit" value="Search!">
+          </form>
+          <hr>
+          <form name="search-person">
+            Search the visitors:
+            <table id="age-table">
+              <tbody><tr>
+                <td>Age:</td>
+                <td id="age-list">
+                  <label>
+                    <input type="radio" name="age" value="young">less than 18</label>
+                  <label>
+                    <input type="radio" name="age" value="mature">18-50</label>
+                  <label>
+                    <input type="radio" name="age" value="senior">more than 50</label>
+                </td>
+              </tr>
+        
+              <tr>
+                <td>Additionally:</td>
+                <td>
+                  <input type="text" name="info[0]">
+                  <input type="text" name="info[1]">
+                  <input type="text" name="info[2]">
+                </td>
+              </tr>
+        
+            </tbody></table>
+        
+            <input type="submit" value="Search!">
+          </form>
+        <script>
+            var a=document.getElementById('age-table');
+            var b=a.querySelectorAll('label');
+            var c=a.querySelector('td');
+            var d=document.querySelector('form[name="search"]')
+            var e=d.querySelector('input');
+            var f=d.querySelector('input[type="submit"]');
+            console.log('Age Table:',a);
+            console.log('Labels:',b);
+            console.log('First TD:', c);
+            console.log('Search Form:',d);
+            console.log('First Input:',e);
+            console.log('Last Input:',f);
+        </script>
+    </body>
+</html
